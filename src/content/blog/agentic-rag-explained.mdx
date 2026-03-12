@@ -1,0 +1,49 @@
+---
+title: "Agentic RAG: Beyond Simple Retrieval"
+excerpt: "Discover how agentic RAG systems go beyond basic retrieval-augmented generation to deliver intelligent, context-aware answers."
+date: "2026-02-15"
+readTime: "6 min read"
+tags: ["RAG", "Agentic AI", "Vector DB", "Knowledge Systems"]
+---
+
+# Agentic RAG: Beyond Simple Retrieval
+
+Traditional RAG systems follow a simple pattern: retrieve relevant documents, stuff them into a prompt, and generate a response. Agentic RAG takes this further by adding reasoning, planning, and tool-use capabilities.
+
+## The Limitations of Basic RAG
+
+Standard RAG pipelines struggle with:
+
+- **Multi-hop questions** — Queries that require connecting information from multiple sources
+- **Ambiguous queries** — Questions that need clarification or reformulation
+- **Stale data** — Information that needs to be verified or updated
+- **Complex reasoning** — Answers that require inference beyond what's explicitly stated
+
+## What Makes RAG "Agentic"?
+
+Agentic RAG systems introduce intelligent decision-making into the retrieval process:
+
+### Query Planning
+
+Instead of using the raw user query, an agent analyzes the question and generates an optimal retrieval strategy — potentially breaking it into sub-queries.
+
+### Adaptive Retrieval
+
+The system decides dynamically whether to search a vector store, query a database, call an API, or use a combination of sources.
+
+### Self-Reflection
+
+After retrieving and generating, the agent evaluates whether the answer is complete and accurate, potentially triggering additional retrieval rounds.
+
+### Tool Integration
+
+Beyond document retrieval, agentic RAG can use calculators, code interpreters, web search, and other tools to enhance responses.
+
+## Implementation Tips
+
+1. **Start with evaluation** — Build a test suite before optimizing
+2. **Chunk strategically** — Document chunking is often more important than the model choice
+3. **Hybrid search** — Combine semantic and keyword search for better recall
+4. **Citation tracking** — Always trace answers back to source documents
+
+Agentic RAG represents the evolution from "find and summarize" to "reason and synthesize" — and it's transforming how we build knowledge systems.
