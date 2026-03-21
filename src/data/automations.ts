@@ -15,14 +15,15 @@ export const automations: Automation[] = [
   },
   {
     id: "youtube-analytics",
-    title: "YouTube Analytics Pipeline",
+    title: "YouTube Analytics",
     description:
-      "An automated analytics pipeline that monitors YouTube channel performance, extracts key metrics, generates insights, and delivers actionable reports on content performance trends.",
+      "A free, no-signup-required analytics platform for YouTube creators. Add any channel by URL to instantly track subscriber growth, view velocity, and video performance metrics — all visualized through interactive charts. Powered by n8n automation workflows and a Next.js frontend, delivering real-time insights within 30 seconds.",
     agents: [
       "Data Collection Agent",
       "Analytics Processor",
       "Report Generator",
     ],
-    techStack: ["YouTube API", "n8n", "Python", "Data Visualization"],
+    techStack: ["YouTube API", "n8n", "Next.js", "Data Visualization"],
+    liveUrl: "https://yt-analytics.zeeshanai.cloud/",
   },
 ];

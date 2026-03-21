@@ -25,7 +25,7 @@ A professional portfolio and services website for **Zeeshan Altaf**, AI Engineer
 | **Hero** | Animated heading, CTA buttons, social links, particle background |
 | **Services** | AI-Powered SaaS Apps, Agentic Workflows, Automation, Agentic RAG |
 | **Featured Projects** | ResuMatchAI, InvoiceExtract, FitFusion, DocGenie |
-| **Automation Workflows** | Multi-Agent Slackbot, YouTube Analytics Pipeline |
+| **Automation Workflows** | Multi-Agent Slackbot, YouTube Analytics ([yt-analytics.zeeshanai.cloud](https://yt-analytics.zeeshanai.cloud/)) |
 | **Blog** | Latest 3 posts preview with link to full blog listing |
 | **Contact** | Validated form submitting to n8n webhook |
 

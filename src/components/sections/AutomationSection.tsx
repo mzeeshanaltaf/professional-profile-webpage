@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Bot, ArrowRight } from "lucide-react";
+import { Bot, ArrowRight, ExternalLink } from "lucide-react";
 import { SectionWrapper } from "@/components/layout/SectionWrapper";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { GlassCard } from "@/components/ui/GlassCard";
@@ -71,6 +71,21 @@ export function AutomationSection() {
                 <TechBadge key={tech} label={tech} />
               ))}
             </div>
+
+            {/* Live link */}
+            {automation.liveUrl && (
+              <div className="mt-5 pt-5 border-t border-white/10">
+                <a
+                  href={automation.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-accent-primary hover:text-accent-secondary transition-colors"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                  View Live Project
+                </a>
+              </div>
+            )}
           </GlassCard>
         ))}
       </div>
