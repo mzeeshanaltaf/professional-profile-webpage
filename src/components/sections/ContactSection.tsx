@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -13,14 +13,30 @@ import { GlowButton } from "@/components/ui/GlowButton";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { SITE_CONFIG, SOCIAL_LINKS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
-import type { ContactFormData } from "@/types";
+interface MathPuzzle {
+  question: string;
+  answer: number;
+}
+
+function generateMathPuzzle(): MathPuzzle {
+  const a = Math.floor(Math.random() * 10) + 1;
+  const b = Math.floor(Math.random() * 10) + 1;
+  if (Math.random() > 0.5) {
+    return { question: `What is ${a} + ${b}?`, answer: a + b };
+  }
+  const [big, small] = a >= b ? [a, b] : [b, a];
+  return { question: `What is ${big} - ${small}?`, answer: big - small };
+}
 
 const contactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Please enter a valid email address"),
   subject: z.string().min(5, "Subject must be at least 5 characters"),
   message: z.string().min(20, "Message must be at least 20 characters"),
+  captcha: z.string().min(1, "Please solve the math puzzle"),
 });
+
+type FormData = z.infer<typeof contactSchema>;
 
 const contactInfo = [
   { icon: Mail, label: "Email", value: SITE_CONFIG.email, href: `mailto:${SITE_CONFIG.email}` },
@@ -30,29 +46,46 @@ const contactInfo = [
 
 export function ContactSection() {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [puzzle, setPuzzle] = useState<MathPuzzle | null>(null);
+
+  useEffect(() => {
+    setPuzzle(generateMathPuzzle());
+  }, []);
+
+  const regeneratePuzzle = useCallback(() => {
+    setPuzzle(generateMathPuzzle());
+  }, []);
 
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm<ContactFormData>({
+  } = useForm<FormData>({
     resolver: zodResolver(contactSchema),
   });
 
-  const onSubmit = async (data: ContactFormData) => {
+  const onSubmit = async (data: FormData) => {
+    if (!puzzle || parseInt(data.captcha, 10) !== puzzle.answer) {
+      toast.error("Incorrect answer to the math puzzle. Please try again.");
+      regeneratePuzzle();
+      return;
+    }
+
     setIsSubmitting(true);
     try {
+      const { captcha, ...contactData } = data;
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        body: JSON.stringify(contactData),
       });
 
       if (!response.ok) throw new Error("Failed to send message");
 
       toast.success("Message sent successfully! I'll get back to you soon.");
       reset();
+      regeneratePuzzle();
     } catch {
       toast.error("Something went wrong. Please try again or email directly.");
     } finally {
@@ -231,12 +264,38 @@ export function ContactSection() {
                 )}
               </motion.div>
 
+              {/* CAPTCHA */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.45 }}
+              >
+                <label
+                  htmlFor="captcha"
+                  className="block text-sm font-medium text-foreground mb-1.5"
+                >
+                  {puzzle?.question ?? "Loading..."}
+                </label>
+                <input
+                  id="captcha"
+                  type="text"
+                  inputMode="numeric"
+                  placeholder="Your answer"
+                  className={inputClasses}
+                  {...register("captcha")}
+                />
+                {errors.captcha && (
+                  <p className="mt-1 text-xs text-red-400">{errors.captcha.message}</p>
+                )}
+              </motion.div>
+
               {/* Submit */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.5 }}
+                transition={{ delay: 0.55 }}
               >
                 <GlowButton
                   type="submit"

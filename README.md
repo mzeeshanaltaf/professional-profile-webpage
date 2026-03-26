@@ -13,7 +13,7 @@ A professional portfolio and services website for **Zeeshan Altaf**, AI Engineer
 - **Glass-morphism UI** — cards with backdrop blur, gradient borders, glow effects
 - **Framer Motion animations** — scroll reveals, staggered children, hover interactions
 - **MDX Blog** — version-controlled posts with frontmatter, reading time, tag filters
-- **Contact form** integrated with n8n webhook (server-side proxy, API key auth)
+- **Contact form** integrated with n8n webhook (server-side proxy, API key auth) with math CAPTCHA
 - **Fully responsive** — mobile, tablet, and desktop layouts
 
 ---
@@ -24,10 +24,10 @@ A professional portfolio and services website for **Zeeshan Altaf**, AI Engineer
 |---|---|
 | **Hero** | Animated heading, CTA buttons, social links, particle background |
 | **Services** | AI-Powered SaaS Apps, Agentic Workflows, Automation, Agentic RAG |
-| **Featured Projects** | ResuMatchAI, InvoiceExtract, FitFusion, DocGenie |
+| **Featured Projects** | ResuMatchAI, InvoiceExtract, FitFusion, DocGenie, ChargeMap PK |
 | **Automation Workflows** | Multi-Agent Slackbot, YouTube Analytics |
 | **Blog** | Latest 3 posts preview with link to full blog listing |
-| **Contact** | Validated form submitting to n8n webhook |
+| **Contact** | Validated form with math CAPTCHA, submitting to n8n webhook |
 
 ---
 
@@ -56,6 +56,7 @@ A professional portfolio and services website for **Zeeshan Altaf**, AI Engineer
 | FitFusion | [fitfusion.zeeshanai.cloud](https://fitfusion.zeeshanai.cloud/) | [GitHub](https://github.com/mzeeshanaltaf/fit-fusion) |
 | DocGenie | [docgenie.zeeshanai.cloud](https://docgenie.zeeshanai.cloud/) | [GitHub](https://github.com/mzeeshanaltaf/docgenie-ai) |
 | YouTube Analytic | [yt-analytics.zeeshanai.cloud](https://yt-analytics.zeeshanai.cloud/) | [GitHub](https://github.com/mzeeshanaltaf/professional-profile-webpage) |
+| ChargeMap PK | [chargemap-pk.zeeshanai.cloud](https://chargemap-pk.zeeshanai.cloud/) | [GitHub](https://github.com/mzeeshanaltaf/ev-chargers-pk) |
 
 ---
 

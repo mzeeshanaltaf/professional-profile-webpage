@@ -45,4 +45,15 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/mzeeshanaltaf/docgenie-ai",
     gradient: "from-deep-blue to-neon-cyan",
   },
+  {
+    id: "chargemap-pk",
+    title: "ChargeMap PK",
+    tagline: "Pakistan's EV Charging Station Discovery Platform",
+    description:
+      "An interactive platform for discovering EV charging stations across Pakistan. Features interactive maps with real-time status, filtering by province/city/charger type, community engagement through comments and reactions, and charging infrastructure analytics.",
+    techStack: ["Next.js", "React", "Leaflet", "TypeScript"],
+    liveUrl: "https://chargemap-pk.zeeshanai.cloud/",
+    githubUrl: "https://github.com/mzeeshanaltaf/ev-chargers-pk",
+    gradient: "from-deep-teal to-neon-cyan",
+  },
 ];
