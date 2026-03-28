@@ -10,6 +10,7 @@ export const projects: Project[] = [
     techStack: ["Python", "LangChain", "OpenAI", "Streamlit", "PDF Processing"],
     liveUrl: "https://resumatch.zeeshanai.cloud/",
     githubUrl: "https://github.com/mzeeshanaltaf/resume-match-ai",
+    image: "/screenshots/resumatch-ai.png",
     gradient: "from-neon-blue to-neon-purple",
   },
   {
@@ -21,6 +22,7 @@ export const projects: Project[] = [
     techStack: ["Python", "GPT-4 Vision", "OCR", "FastAPI", "JSON Schema"],
     liveUrl: "https://invoicextract.zeeshanai.cloud/",
     githubUrl: "https://github.com/mzeeshanaltaf/invoice-extract",
+    image: "/screenshots/invoice-extract.png",
     gradient: "from-neon-cyan to-deep-teal",
   },
   {
@@ -32,6 +34,7 @@ export const projects: Project[] = [
     techStack: ["Python", "OpenAI", "Streamlit", "Nutritional APIs"],
     liveUrl: "https://fitfusion.zeeshanai.cloud/",
     githubUrl: "https://github.com/mzeeshanaltaf/fit-fusion",
+    image: "/screenshots/fit-fusion.png",
     gradient: "from-neon-purple to-neon-pink",
   },
   {
@@ -43,6 +46,7 @@ export const projects: Project[] = [
     techStack: ["Python", "LangChain", "ChromaDB", "Streamlit", "RAG"],
     liveUrl: "https://docgenie.zeeshanai.cloud/",
     githubUrl: "https://github.com/mzeeshanaltaf/docgenie-ai",
+    image: "/screenshots/doc-genie.png",
     gradient: "from-deep-blue to-neon-cyan",
   },
   {
@@ -54,6 +58,7 @@ export const projects: Project[] = [
     techStack: ["Next.js", "React", "Leaflet", "TypeScript"],
     liveUrl: "https://chargemap-pk.zeeshanai.cloud/",
     githubUrl: "https://github.com/mzeeshanaltaf/ev-chargers-pk",
+    image: "/screenshots/chargemap-pk.png",
     gradient: "from-deep-teal to-neon-cyan",
   },
 ];

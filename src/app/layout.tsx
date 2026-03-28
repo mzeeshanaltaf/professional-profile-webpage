@@ -26,11 +26,11 @@ export const metadata: Metadata = {
   icons: {
     icon: "/ZA.png",
   },
-  title: "Zeeshan Altaf | AI Engineer & Agentic AI Architect",
+  title: "Zeeshan Altaf | AI Transformation Leader & Agentic AI Architect",
   description:
     "Building autonomous AI systems, agentic workflows & intelligent automation. Specializing in AI-powered SaaS, multi-agent systems, and RAG solutions.",
   keywords: [
-    "AI Engineer",
+    "AI Transformation Leader",
     "Agentic AI",
     "Automation",
     "Multi-Agent Systems",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Zeeshan Altaf" }],
   openGraph: {
-    title: "Zeeshan Altaf | AI Engineer & Agentic AI Architect",
+    title: "Zeeshan Altaf | AI Transformation Leader & Agentic AI Architect",
     description:
       "Building autonomous AI systems, agentic workflows & intelligent automation.",
     type: "website",

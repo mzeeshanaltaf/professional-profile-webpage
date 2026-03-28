@@ -26,6 +26,7 @@ export interface Automation {
   agents: string[];
   techStack: string[];
   liveUrl?: string;
+  image?: string;
 }
 
 export interface BlogPostMeta {

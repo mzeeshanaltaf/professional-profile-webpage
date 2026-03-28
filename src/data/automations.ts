@@ -12,6 +12,7 @@ export const automations: Automation[] = [
       "Knowledge Retrieval Agent",
     ],
     techStack: ["Slack API", "LangChain", "n8n", "Vector DB", "Python"],
+    image: "/screenshots/multiagent-slackbot.png",
   },
   {
     id: "youtube-analytics",
@@ -25,5 +26,6 @@ export const automations: Automation[] = [
     ],
     techStack: ["YouTube API", "n8n", "Next.js", "Data Visualization"],
     liveUrl: "https://yt-analytics.zeeshanai.cloud/",
+    image: "/screenshots/yt-analytics.png",
   },
 ];

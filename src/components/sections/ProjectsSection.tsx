@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 import { SectionWrapper } from "@/components/layout/SectionWrapper";
@@ -43,26 +44,42 @@ export function ProjectsSection() {
                 )}
                 style={{ perspective: "1000px" }}
               >
-                {/* Gradient background as placeholder */}
-                <div
-                  className={cn(
-                    "absolute inset-0 bg-gradient-to-br opacity-20",
-                    project.gradient
-                  )}
-                />
-                <div className="absolute inset-0 glass flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <h4 className={cn(
-                      "text-4xl md:text-5xl font-bold font-[family-name:var(--font-space-grotesk)] bg-gradient-to-r bg-clip-text text-transparent",
-                      project.gradient
-                    )}>
-                      {project.title}
-                    </h4>
-                    <p className="text-foreground-muted mt-2 text-sm">
-                      {project.tagline}
-                    </p>
+                {project.image ? (
+                  <div className="absolute inset-0 bg-black/80">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-contain"
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                    />
+                    <div
+                      className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                    />
                   </div>
-                </div>
+                ) : (
+                  <>
+                    <div
+                      className={cn(
+                        "absolute inset-0 bg-gradient-to-br opacity-20",
+                        project.gradient
+                      )}
+                    />
+                    <div className="absolute inset-0 glass flex items-center justify-center">
+                      <div className="text-center p-8">
+                        <h4 className={cn(
+                          "text-4xl md:text-5xl font-bold font-[family-name:var(--font-space-grotesk)] bg-gradient-to-r bg-clip-text text-transparent",
+                          project.gradient
+                        )}>
+                          {project.title}
+                        </h4>
+                        <p className="text-foreground-muted mt-2 text-sm">
+                          {project.tagline}
+                        </p>
+                      </div>
+                    </div>
+                  </>
+                )}
                 {/* Hover glow */}
                 <div
                   className={cn(

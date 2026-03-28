@@ -1,9 +1,9 @@
 export const SITE_CONFIG = {
   name: "Zeeshan Altaf",
-  title: "AI Engineer | Agentic AI Architect",
+  title: "AI Transformation Leader | Agentic AI Architect",
   tagline: "Building autonomous AI systems, agentic workflows & intelligent automation",
   description:
-    "Zeeshan Altaf — AI Engineer & Agentic AI Architect specializing in autonomous AI systems, multi-agent workflows, and intelligent automation solutions.",
+    "Zeeshan Altaf — AI Transformation Leader & Agentic AI Architect specializing in autonomous AI systems, multi-agent workflows, and intelligent automation solutions.",
   email: "hello@zeeshanai.cloud",
   url: "https://zeeshanai.cloud",
   profileUrl: "https://profile.zeeshanai.cloud",

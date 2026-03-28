@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Bot, ArrowRight, ExternalLink } from "lucide-react";
 import { SectionWrapper } from "@/components/layout/SectionWrapper";
@@ -39,6 +40,19 @@ export function AutomationSection() {
             <p className="text-foreground-muted text-sm leading-relaxed mb-6">
               {automation.description}
             </p>
+
+            {/* Screenshot */}
+            {automation.image && (
+              <div className="relative rounded-xl overflow-hidden aspect-[16/10] mb-6 bg-black/80">
+                <Image
+                  src={automation.image}
+                  alt={automation.title}
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </div>
+            )}
 
             {/* Agent flow visualization */}
             <div className="mb-6 space-y-3">
