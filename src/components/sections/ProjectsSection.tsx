@@ -77,14 +77,16 @@ export function ProjectsSection() {
                     </div>
                   </>
                 )}
-                {/* Hover glow */}
-                <div
-                  className={cn(
-                    "absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r blur-xl",
-                    project.gradient
-                  )}
-                  style={{ mixBlendMode: "overlay" }}
-                />
+                {/* Hover glow (gradient placeholder only) */}
+                {!project.image && (
+                  <div
+                    className={cn(
+                      "absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r blur-xl",
+                      project.gradient
+                    )}
+                    style={{ mixBlendMode: "overlay" }}
+                  />
+                )}
               </motion.div>
 
               {/* Content */}
