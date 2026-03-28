@@ -43,12 +43,13 @@ export function AutomationSection() {
 
             {/* Screenshot */}
             {automation.image && (
-              <div className="relative rounded-xl overflow-hidden aspect-[16/10] mb-6 bg-black/80">
+              <div className="rounded-xl overflow-hidden mb-6">
                 <Image
                   src={automation.image}
                   alt={automation.title}
-                  fill
-                  className="object-contain"
+                  width={1200}
+                  height={750}
+                  className="w-full h-auto"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>

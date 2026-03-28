@@ -38,25 +38,22 @@ export function ProjectsSection() {
                 whileHover={{ scale: 1.02, rotateY: isEven ? 3 : -3 }}
                 transition={{ duration: 0.3 }}
                 className={cn(
-                  "relative rounded-2xl overflow-hidden aspect-[16/10]",
+                  "relative rounded-2xl overflow-hidden",
+                  !project.image && "aspect-[16/10]",
                   !isEven && "lg:order-2",
                   "group"
                 )}
                 style={{ perspective: "1000px" }}
               >
                 {project.image ? (
-                  <div className="absolute inset-0 bg-black/80">
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      fill
-                      className="object-contain"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                    />
-                    <div
-                      className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                    />
-                  </div>
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    width={1200}
+                    height={750}
+                    className="w-full h-auto"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                  />
                 ) : (
                   <>
                     <div
