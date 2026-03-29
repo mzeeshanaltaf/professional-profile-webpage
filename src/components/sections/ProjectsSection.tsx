@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { ThemedImage } from "@/components/ui/ThemedImage";
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 import { SectionWrapper } from "@/components/layout/SectionWrapper";
@@ -46,7 +46,7 @@ export function ProjectsSection() {
                 style={{ perspective: "1000px" }}
               >
                 {project.image ? (
-                  <Image
+                  <ThemedImage
                     src={project.image}
                     alt={project.title}
                     width={1200}

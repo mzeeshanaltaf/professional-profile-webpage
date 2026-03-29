@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { ThemedImage } from "@/components/ui/ThemedImage";
 import { motion } from "framer-motion";
 import { Bot, ArrowRight, ExternalLink } from "lucide-react";
 import { SectionWrapper } from "@/components/layout/SectionWrapper";
@@ -44,7 +44,7 @@ export function AutomationSection() {
             {/* Screenshot */}
             {automation.image && (
               <div className="rounded-xl overflow-hidden mb-6">
-                <Image
+                <ThemedImage
                   src={automation.image}
                   alt={automation.title}
                   width={1200}
